@@ -2,7 +2,7 @@ const os = require("os");
 const io = require("socket.io-client");
 let socket = io("http://127.0.0.1:8181");
 let netInt = os.networkInterfaces();
-
+ 
 socket.on("connect", () => {
   //get the mac address of the machine
   let macAdr;
@@ -12,12 +12,22 @@ socket.on("connect", () => {
       break;
     }
   }
+  //init performanceData
+  performanceData().then((performance) => {
+    performance.macAdr = macAdr;
+    socket.emit("initPerformanceData", performance);
+  });
+
   //send performance data
   let perfDataInterval = setInterval(() => {
     performanceData().then((performance) => {
       socket.emit("performanceData", performance);
     });
   }, 1000);
+
+  socket.on("disconnect", () => {
+    clearInterval(perfDataInterval);
+  });
 });
 
 function performanceData() {

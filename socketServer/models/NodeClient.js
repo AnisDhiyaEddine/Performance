@@ -9,21 +9,9 @@ const NodeClientSchema = new mongoose.Schema({
   upTime: { type: Number },
   cpuModel: { type: String },
   numCores: { type: Number },
-  cpuSpeed: { type: Numbre },
-  cpuLoad: { type: Numbre },
+  cpuSpeed: { type: Number },
+  cpuLoad: { type: Number },
   isActive: { type: Boolean },
 });
 
 module.exports = mongoose.model("NodeClient", NodeClientSchema);
-
-/*  freeMem,
-      totalMem,
-      usedMem,
-      memUseage,
-      osType,
-      upTime,
-      cpuModel,
-      numCores,
-      cpuSpeed,
-      cpuLoad,
-      isActive, */
