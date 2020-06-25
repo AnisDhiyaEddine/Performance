@@ -43,6 +43,7 @@ class Widget extends Component {
 
     let { cpu, memory, info } = this.getinfo();
     if (!info.isActive) {
+      info.macAdr = Math.floor(Math.random()*10000)
       notActiveDiv = <div className="not-active">offline</div>;
     }
     cpu.cpuWidgetId = `canvas-cpu-${info.macAdr.toString()}`;

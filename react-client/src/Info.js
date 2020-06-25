@@ -10,13 +10,13 @@ function Info(props) {
   </div>
   <h3>Processor information</h3>
   <div className="widget-text">
-    <strong>Type:</strong> {props.infoData.cpuModel}
+    <strong>Type :</strong> {props.infoData.cpuModel}
   </div>
   <div className="widget-text">
-    <strong>Number of Cores:</strong> {props.infoData.cpuNumCores}
+    <strong>Number of Cores : </strong>  {props.infoData.numCores}
   </div>
   <div className="widget-text">
-    <strong>Clock Speed:</strong> {props.infoData.cpuSpeed}
+    <strong>Clock Speed :</strong> {props.infoData.cpuSpeed}
   </div>
 </div>)
  
