@@ -1,26 +1,36 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-const socket = require("./utils/socket");
-const Widget = require("./Widget");
+import React, { Component } from 'react';
+import './App.css';
+import socket from './utils/socket';
+import Widget from './Widget';
+
 class App extends Component {
-  constructor() {
+  constructor(){
     super();
     this.state = {
-      performanceData: {},
-    };
+      performanceData: {}
+    }
   }
 
-  componentDidMount() {
-    socket.on("data", (data) => {
-      console.log(data);
-    });
+  componentDidMount(){
+    socket.on('data',(data)=>{
+      const currentState = {};
+      currentState[data.macAdr] = data;     
+      this.setState({
+        performanceData: currentState
+      })
+    })
   }
 
   render() {
+    let widgets = [];
+    const data = this.state.performanceData;
+    // grab each machine, by property, from data
+    Object.entries(data).forEach(([key,value])=>{
+      widgets.push(<Widget key={key} data={value} />)
+    })
     return (
       <div className="App">
-        <Widget />
+        {widgets}
       </div>
     );
   }

@@ -21,6 +21,7 @@ socket.on("connect", () => {
   //send performance data
   let perfDataInterval = setInterval(() => {
     performanceData().then((performance) => {
+      performance.macAdr = macAdr;
       socket.emit("performanceData", performance);
     });
   }, 1000);
@@ -55,7 +56,7 @@ function performanceData() {
       numCores,
       cpuSpeed,
       cpuLoad,
-      isActive,
+      isActive, 
     });
   });
 }
