@@ -3,8 +3,6 @@
 ## Version
 
 * [x] En
-* [Fr](##Fr)
-
 -------
 ## About the project
 <p>Performance is a full stack web-app on development that helps IT professionals monitoring their servers on term of performance health , memory useage ,cpu load ...etc,  It's composed of three components. </p>
