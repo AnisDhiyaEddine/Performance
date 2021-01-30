@@ -41,7 +41,7 @@
   ```          
 
   -----
-### Visual the project on [Performance project]("https://youtu.be/PyLMF0_z3BA")
+### Visual the project on [Performance project](https://youtu.be/PyLMF0_z3BA)
   -----
 
 ## Fr
@@ -61,7 +61,7 @@ Performance est une application Web full-stack en développement qui aide les pr
   yarn install
   yarn start
   ```
-- ### A react-client
+- ### Un client react
    <p>à installer sur les moniteurs</p>
    <p>Commencer</p>
 
@@ -71,7 +71,7 @@ Performance est une application Web full-stack en développement qui aide les pr
   yarn install
   yarn start
   ```
-- ### A socket-server
+- ### Un serveur socket.io
    <p>à installer sur le serveur principal</p>
    <p>Commencer</p>
 
@@ -83,5 +83,5 @@ Performance est une application Web full-stack en développement qui aide les pr
   ```          
   -----
     -----
-### Visualisez le projet sur [Performance]("https://youtu.be/PyLMF0_z3BA")
+### Visualisez le projet sur [Performance](https://youtu.be/PyLMF0_z3BA)
   -----
