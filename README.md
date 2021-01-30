@@ -3,7 +3,7 @@
 ## Version
 
 * [x] En
-* [Fr](##fr)
+* [Fr](##Fr)
 
 -------
 ## About the project
